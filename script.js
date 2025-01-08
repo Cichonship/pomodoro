@@ -1,7 +1,7 @@
 let timeLeft;
 let workTime = 25 * 60; // 25 minutes in seconds
-let shortBreakTime = 5 * 60; // 5 minutes in seconds
-let longBreakTime = 10 * 60; // 10 minutes in seconds
+let shortRestTime = 5 * 60; // 5 minutes in seconds
+let longRestTime = 10 * 60; // 10 minutes in seconds
 let timerId = null;
 const TIMES = {
     'Work': 25 * 60,
@@ -71,9 +71,9 @@ function getSelectedTime() {
         case 'Work':
             return workTime;
         case 'Short Rest':
-            return shortBreakTime;
+            return shortRestTime;
         case 'Long Rest':
-            return longBreakTime;
+            return longRestTime;
         default:
             return workTime;
     }
