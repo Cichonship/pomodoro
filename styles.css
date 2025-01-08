@@ -1,0 +1,104 @@
+:root {
+  --primary: #00B2CA;
+  --primary-dark: #0097AC;
+  --background: #F8F9FA;
+  --surface: #FFFFFF;
+  --text: #2D3436;
+  --text-secondary: #636E72;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.container {
+  text-align: center;
+  background-color: var(--surface);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.timer {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -2px;
+}
+
+.controls button {
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.controls button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+#status-text {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-top: 1.5rem;
+}
+
+.timer-modes {
+  margin-bottom: 2rem;
+}
+
+#mode-selector {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #E2E8F0;
+  background-color: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  width: 80%;
+  max-width: 250px;
+}
+
+#mode-selector:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem;
+    width: 85%;
+  }
+  
+  .timer {
+    font-size: 4rem;
+  }
+} 
