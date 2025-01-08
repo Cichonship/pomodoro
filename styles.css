@@ -6,6 +6,18 @@
   --text: #2D3436;
   --text-secondary: #636E72;
   --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --border: #E2E8F0;
+}
+
+[data-theme="dark"] {
+  --primary: #00B2CA;
+  --primary-dark: #0097AC;
+  --background: #1a1a1a;
+  --surface: #2d2d2d;
+  --text: #FFFFFF;
+  --text-secondary: #A0AEC0;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --border: #404040;
 }
 
 body {
@@ -20,6 +32,7 @@ body {
 }
 
 .container {
+  position: relative;
   text-align: center;
   background-color: var(--surface);
   padding: 3rem;
@@ -101,4 +114,33 @@ h1 {
   .timer {
     font-size: 4rem;
   }
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text);
 } 
